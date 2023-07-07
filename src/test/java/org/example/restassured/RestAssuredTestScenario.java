@@ -1,6 +1,7 @@
 package org.example.restassured;
 
 import io.restassured.RestAssured;
+import io.restassured.mapper.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.equalTo;
@@ -23,9 +24,9 @@ public class RestAssuredTestScenario {
     @Test
     public void GET_restAssuredTestCase_withAssertion(){
         RestAssured.given()
-                //.header()
-                //.headers()
-                //.body()
+//                .header()
+//                .headers()
+//                .body()
                 .when()
                 .get("https://pokeapi.co/api/v2/pokemon/ditto") // GET
                 .then()
@@ -49,13 +50,18 @@ public class RestAssuredTestScenario {
 
     @Test
     public void POST_restAssuredTestCase(){
+        // Gson - do bani
+        // Jackson - ok
+
         RestAssured.given()
                 //.header()
                 //.headers()
-                //.body()
+//                .body()
                 .when()
                 .post("https://pokeapi.co/api/v2/pokemon/ditto") // POST
-                .then();
+                .then()
+                .assertThat()
+                .statusCode(201);
     }
 
 }
