@@ -21,6 +21,12 @@ dependencies {
     // HAMCREST - https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all
     testImplementation 'org.hamcrest:hamcrest-all:1.3'
 
+    // SELENIUM WEBDRIVER
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.10.0'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.4.0'
+
 }
 
 test {
