@@ -1,5 +1,6 @@
 package org.example.test;
 
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -21,4 +22,13 @@ public class ExampleTestScenario {
     private int maxMethod(int a, int b) {
         return Math.max(a, b);
     }
+
+    public String stub_zaslepka(String asd){
+        return "Poznakowski";
+    }
+
+    public String mock_sterownika(String qwe){
+        return new Faker().name().lastName();
+    }
+
 }

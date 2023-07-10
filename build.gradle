@@ -27,8 +27,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.4.0'
 
+    // TESTCONTAINERS
     testImplementation platform('org.testcontainers:testcontainers-bom:1.18.3')
     testImplementation('org.testcontainers:selenium')
+
+    // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 
 }
 
